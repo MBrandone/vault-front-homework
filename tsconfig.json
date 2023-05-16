@@ -32,6 +32,9 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "node_modules/.pnpm/vitest@0.31.0_jsdom@22.0.0/node_modules/vitest/globals.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
