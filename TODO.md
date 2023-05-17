@@ -1,19 +1,22 @@
 # Notes
 
 ## Todo
-- [x] Fix node version with nvm
-- [x] debugging de l'appel API
-- [x] ESLint 
-- [x] Ajout test React-Testing-Library & Vitest
-- [x] Faire une meilleure intégration
-- [x] Corriger le back
-- [x] Mettre une pipeline de lint & build & test
-- [x] Deployer sur Vercel
-- [x] Accessibilité
-- [x] Responsive
-- [ ] Améliorer les performances Lighthouse
-- [ ] Prettier
-- [ ] Ajout test cypress
+- [x] Debug - Fix node version with nvm
+- [x] Debug - API
+- [x] Tooling - ESLint
+- [x] Testing - Ajout test React-Testing-Library & Vitest
+- [x] UI - Faire une meilleure intégration
+- [x] Debug - Corriger le back
+- [x] Tooling - Mettre une pipeline de lint & build & test
+- [x] Deploiement - Deployer sur Vercel
+- [x] Tooling -Accessibilité
+- [x] UI - Responsive
+- [ ] UI - Cartes différentes pour notifications différentes
+- [ ] Tech - Améliorer les performances Lighthouse
+- [ ] UX - Cliquer sur un bouton pour filtrer directement
+- [ ] Tooling - Prettier
+- [ ] Tooling - git hook lint
+- [ ] Testing - Ajout test cypress
 
 ## NB
 
