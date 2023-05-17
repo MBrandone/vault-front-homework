@@ -5,17 +5,17 @@ export type Notification = {
 }
 
 type Transaction = {
-	"id": string
-	"amount": number
-	"from": string
-	"to": string
-	"unit": string
+	'id': string
+	'amount': number
+	'from': string
+	'to': string
+	'unit': string
 }
 
 type Account = {
-	"id": string
-	"currency": string
-	"name": string
+	'id': string
+	'currency': string
+	'name': string
 }
 
 export interface Notifications {

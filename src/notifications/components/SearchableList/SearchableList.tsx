@@ -30,9 +30,9 @@ const SearchableList = ({ notifications }: SearchableListProps) => {
 				</div>
 				{isLoading && <Spinner/>}
 				{data && data.length > 0 ? (
-						data.map((notification: Notification) => (
-							<NotificationCard key={notification.id} notification={notification}/>
-						)))
+					data.map((notification: Notification) => (
+						<NotificationCard key={notification.id} notification={notification}/>
+					)))
 					: <div>Aucun résultat trouvé</div>
 
 				}

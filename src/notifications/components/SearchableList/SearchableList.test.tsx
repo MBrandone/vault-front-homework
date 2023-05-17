@@ -13,7 +13,7 @@ export const notification1: Notification = {
 		id: 'DOLLARS',
 		name: 'CURRENCY'
 	}
-}
+};
 
 export const notification2: Notification = {
 	id: 'id_brm_2',
@@ -23,7 +23,7 @@ export const notification2: Notification = {
 		id: 'DOLLARS',
 		name: 'CURRENCY'
 	}
-}
+};
 
 const queryClient = new QueryClient();
 
@@ -31,13 +31,13 @@ describe('permet de rechercher des notifications', () => {
 	test('doit afficher les notifications initiales, sans texte de recherche', async () => {
 		// given
 		const mockNotifications: Notifications = { getBySearchedText: () => Promise.resolve([notification1]) };
-		const getBySearchedTextSpy = vi.spyOn(mockNotifications, 'getBySearchedText')
+		const getBySearchedTextSpy = vi.spyOn(mockNotifications, 'getBySearchedText');
 
 		// When
 		render(
 			<QueryClientProvider client={queryClient}>
 				<SearchableList notifications={mockNotifications}/>
-			</QueryClientProvider>)
+			</QueryClientProvider>);
 
 		// Then
 		await waitFor(() => {
@@ -46,26 +46,26 @@ describe('permet de rechercher des notifications', () => {
 			expect(screen.getByText('currency: $')).toBeInTheDocument();
 			expect(screen.getByText('id: DOLLARS')).toBeInTheDocument();
 			expect(screen.getByText('name: CURRENCY')).toBeInTheDocument();
-		})
-		expect(getBySearchedTextSpy).toHaveBeenCalledOnce()
+		});
+		expect(getBySearchedTextSpy).toHaveBeenCalledTimes(1);
 	});
 
 	test('doit relancer une recherche quand le texte change', async () => {
 		// given
 		const mockNotifications: Notifications = { getBySearchedText: (searchedText) => {
 			if (searchedText === '') {
-				return Promise.resolve([notification1])
+				return Promise.resolve([notification1]);
 			}
-			return Promise.resolve([notification2])
+			return Promise.resolve([notification2]);
 		} };
-		const getBySearchedTextSpy = vi.spyOn(mockNotifications, 'getBySearchedText')
+		const getBySearchedTextSpy = vi.spyOn(mockNotifications, 'getBySearchedText');
 		render(
 			<QueryClientProvider client={queryClient}>
 				<SearchableList notifications={mockNotifications}/>
-			</QueryClientProvider>)
+			</QueryClientProvider>);
 
 		// When
-		await userEvent.setup().type(screen.getByRole('searchbox'), 'a')
+		await userEvent.setup().type(screen.getByRole('searchbox'), 'a');
 
 		// Then
 		expect(screen.getByText('ID: id_brm_2')).toBeInTheDocument();
@@ -73,24 +73,24 @@ describe('permet de rechercher des notifications', () => {
 		expect(screen.getByText('currency: $')).toBeInTheDocument();
 		expect(screen.getByText('id: DOLLARS')).toBeInTheDocument();
 		expect(screen.getByText('name: CURRENCY')).toBeInTheDocument();
-		expect(getBySearchedTextSpy).toHaveBeenCalledTimes(2)
-	})
+		expect(getBySearchedTextSpy).toHaveBeenCalledTimes(2);
+	});
 
 	test('doit afficher "Aucun résultat trouvé" quand aucune notification est trouvé', async () => {
 		// given
 		const mockNotifications: Notifications = { getBySearchedText: () => Promise.resolve([]) };
-		const getBySearchedTextSpy = vi.spyOn(mockNotifications, 'getBySearchedText')
+		const getBySearchedTextSpy = vi.spyOn(mockNotifications, 'getBySearchedText');
 
 		// When
 		render(
 			<QueryClientProvider client={queryClient}>
 				<SearchableList notifications={mockNotifications}/>
-			</QueryClientProvider>)
+			</QueryClientProvider>);
 
 		// Then
 		await waitFor(() => {
 			expect(screen.getByText('Aucun résultat trouvé')).toBeInTheDocument();
-		})
-		expect(getBySearchedTextSpy).toHaveBeenCalledOnce()
-	})
+		});
+		expect(getBySearchedTextSpy).toHaveBeenCalledTimes(1);
+	});
 });

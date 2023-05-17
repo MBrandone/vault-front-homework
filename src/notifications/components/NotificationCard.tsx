@@ -11,6 +11,7 @@ export function NotificationCard({ notification }: { notification: Notification 
 				<li>ID: {notification.id}</li>
 				<li>Type: {notification.type}</li>
 				{Object.keys(notification.data).map(key => {
+					// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 					// @ts-ignore TODO traiter des objets + précis
 					return <li key={key}>{`${key}: ${notification.data[key]}`}</li>;
 				})}

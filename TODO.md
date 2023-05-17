@@ -7,7 +7,9 @@
 - [x] Ajout test RTL vitest
 - [x] Faire une intégration Wahou
 - [x] Corriger back
-- [ ] pipeline de lint & test 
+- [x] pipeline de lint & build & test
+- [ ] Accessibilité
+- [ ] Standard du web
 - [ ] Deployer sur Vercel
 - [ ] Prettier
 - [ ] Ajout test cypress
@@ -49,4 +51,4 @@ tailwind est déjà installé donc on utilise
 J'ai trouvé Flowbite pour avoir un design sans trop me prendre la tête
 
 ## Back
-Y a un not en trop pour vérifier que ça s'affiche bien
+Y a un `not` en trop pour vérifier que ça s'affiche bien

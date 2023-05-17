@@ -32,6 +32,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true
   },
+  "types": ["node", "jest", "@testing-library/jest-dom"],
   "include": [
     "src",
     "node_modules/.pnpm/vitest@0.31.0_jsdom@22.0.0/node_modules/vitest/globals.d.ts"
