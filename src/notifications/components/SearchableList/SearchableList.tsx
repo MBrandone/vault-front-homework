@@ -18,10 +18,9 @@ const SearchableList = ({ notifications }: SearchableListProps) => {
 	});
 
 	return <>
-		<header
-			className="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Notifications
-			Searcher
-		</header>
+		<h1 className="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+			Notifications Searcher
+		</h1>
 
 		<section>
 			<>
@@ -34,7 +33,6 @@ const SearchableList = ({ notifications }: SearchableListProps) => {
 						<NotificationCard key={notification.id} notification={notification}/>
 					)))
 					: <div>Aucun résultat trouvé</div>
-
 				}
 			</>
 		</section>

@@ -8,9 +8,10 @@
 - [x] Faire une meilleure intégration
 - [x] Corriger le back
 - [x] Mettre une pipeline de lint & build & test
+- [x] Deployer sur Vercel
 - [ ] Accessibilité
-- [ ] Standard du web
-- [ ] Deployer sur Vercel
+- [ ] Responsive
+- [ ] Améliorer les performances Lighthouse
 - [ ] Prettier
 - [ ] Ajout test cypress
 
@@ -54,3 +55,10 @@ J'ai trouvé [Flowbite](https://flowbite.com/) pour avoir un bon design sans tro
 
 ## Correction du Back
 Y a un `not` en trop pour vérifier que ça s'affiche bien
+
+## Pipelines
+ça peut être amélioré en utilisant des images avec pnpm déjà prêt
+
+## Accéssibilité
+- Installation du plugin eslint react a11y
+- Installation de axe-core/react
