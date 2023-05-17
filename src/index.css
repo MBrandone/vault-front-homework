@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply p-16;
+  padding: 4rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2rem;
+  }
 }

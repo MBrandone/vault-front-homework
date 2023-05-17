@@ -9,8 +9,8 @@
 - [x] Corriger le back
 - [x] Mettre une pipeline de lint & build & test
 - [x] Deployer sur Vercel
-- [ ] Accessibilité
-- [ ] Responsive
+- [x] Accessibilité
+- [x] Responsive
 - [ ] Améliorer les performances Lighthouse
 - [ ] Prettier
 - [ ] Ajout test cypress
